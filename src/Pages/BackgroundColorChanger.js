@@ -1,10 +1,13 @@
 import React from 'react';
+import { useParams } from 'react-router-dom'
 
 
 export const BackgroundColorChanger = () =>{
-return (
-    <main style={{ height: '100vh', backgroundColor: colorname }}>
-      <h2>Background Color Changer</h2>
-    </main>
-  );
+    let {colorname} = useParams();
+    console.log(colorname);
+    return(
+       <main style={{ height: "100vh", backgroundColor: `${colorname}` }}>
+       Background Color Change
+       </main>
+    )
 }
